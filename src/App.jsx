@@ -11,6 +11,10 @@ import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage";
 import PageWrapper from "./components/PageWrapper";
 import Overview from "./pages/TournamentsPage/Overview";
+import Watch from "./pages/TournamentsPage/Watch";
+import Matches from "./pages/TournamentsPage/Matches";
+import Matches2 from "./pages/TournamentsPage/Matches2";
+
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -30,6 +34,11 @@ export default function App() {
 
           <Route element={<PageWrapper />}>
             <Route path="tournamentspage/overview" element={<Overview />} />
+            <Route path="tournamentspage/watch" element={<Watch />} />
+            <Route path="tournamentspage/matches" element={<Matches />} />
+            <Route path="tournamentspage/matches2" element={<Matches2 />} />
+            {/* <Route path="tournamentspage/rules" element={<Rules />} />
+            <Route path="tournamentspage/standings" element={<Standings />} /> */}
           </Route>
 
           {/* Protected/authenticated routes */}
