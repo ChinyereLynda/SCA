@@ -6,7 +6,7 @@ export default function LeagueWatch() {
   const clips = [
     {
       id: 1,
-      image: "/assets/ancient_greek.png",
+      image: "//assets/ancient_greek.png",
       imageTitle: "/assets/path_of_legends.png",
       title: "PATH OF LEGENDS JANUARY 2024",
       uploader: "Manjo",

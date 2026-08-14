@@ -9,7 +9,7 @@ export default function TournMatches() {
     navigate("/tournamentspage/matches2");
   };
 
-  const dummyAvatar = "https://i.pravatar.cc/40?img=";
+  // const dummyAvatar = "https://i.pravatar.cc/40?img=";
 
   const matchGroupData = [
     {

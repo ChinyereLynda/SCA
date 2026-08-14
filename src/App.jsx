@@ -1,6 +1,7 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
+  Router,
   Routes,
   Route,
   Navigate,
@@ -27,13 +28,15 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserWrapper from "./components/User/UserWrapper";
 import UserPageOverview from "./pages/UserPage/UserPageOverview";
+import ComingSoonPage from "./pages/ComingSoonPage";
 
 export default function App() {
   return (
+       <BrowserRouter>
     <AuthProvider>
-      <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          {/* Temporary launch page. Restore <LandingPage /> here after launch. */}
+          <Route path="/" element={<ComingSoonPage />} />
 
           {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
 
@@ -99,9 +102,7 @@ export default function App() {
             />
           </Route> */}
         </Routes>
-      </Router>
     </AuthProvider>
+      </BrowserRouter>
   );
 }
-
-

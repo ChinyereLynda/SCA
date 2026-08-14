@@ -30,27 +30,27 @@ const tournaments = [
 
 export default function Tournaments() {
   const navigate = useNavigate();
-  const handleTournamentClick = () => {
-    navigate("/tournaments/tournamentlist");
+  const handleJoin = () => {
+    navigate("/tournamentspage/overview");
   };
   
   const handleSeeAll = () => {
-    navigate("/tournamentspage/overview");
+    navigate("/tournaments/tournamentlist");
   };
   return (
-    <section className="bg-background py-20 px-6 md:px-16">
+    <section id="tournaments" className="bg-background py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
-        <h2 onClick={handleTournamentClick} className="text-3xl md:text-4xl text-white text-center mb-12">
+        <h2 className="text-3xl md:text-4xl text-white text-center mb-12">
           TOURNAMENTS
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center justify-center">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center justify-center">
           {tournaments.map((tournament, index) => (
             <TournamentCard key={index} tournament={tournament} />
           ))}
-        </div>
+        </div> */}
 
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center justify-center">
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center justify-center">
           {tournaments.map((tournament, index) => (
             <div
               key={index}
@@ -70,23 +70,24 @@ export default function Tournaments() {
                     Participants
                   </p>
 
-                  <Button
-                    text="Join"
-                    size="small"
-                    fontSize="text-sm"
-                    iconLeft={
-                      <img
-                        src="/assets/icons/shield_check.svg"
-                        alt="Join Icon"
-                        className="w-5 h-5"
-                      />
+                 <Button
+                  onClick={handleJoin}
+                     text="Join"
+                     size="small"
+                     fontSize="text-sm"
+                     iconLeft={
+                       <img
+                         src="/assets/icons/shield_check.svg"
+                         alt="Join Icon"
+                         className="w-5 h-5"
+                       />
                     }
                   />
                 </div>
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
         <div className="mt-12 flex items center justify-center">
           <Button

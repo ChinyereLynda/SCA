@@ -3,7 +3,7 @@ import HeaderInfoCards from "../InfoCard/HeaderInfoCards";
 import MatchParticipantCard from "../InfoCard/MatchParticipantCard";
 import ParticipantBoardHeading from "../ParticipantsBoardHeading";
 import { ArrowCircleLeft2 } from "iconsax-reactjs";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const players = [
   {
@@ -90,7 +90,7 @@ const players = [
 ];
 
 export default function TournStandings({ showWins = true }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div>
